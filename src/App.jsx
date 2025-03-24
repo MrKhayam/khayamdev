@@ -6,6 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { GoArrowUpRight } from "react-icons/go";
+import Project from "./components/Project";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -50,7 +51,6 @@ function App() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
-
   const handleDownload = () => {
     // Create a temporary anchor element
     const link = document.createElement("a");
@@ -60,9 +60,62 @@ function App() {
     link.click(); // Simulate a click
     document.body.removeChild(link); // Clean up
   };
-  
-  
-  
+
+  const projects = [
+    {
+      title: "A reuseable UI component library, React Buttons Library",
+      description:
+        "I built a React component library that houses a collection of buttons, each with a unique design and functionality. The library is easy to install, customize, and use in any React project, saving developers time and effort in creating buttons from scratch. It can also create custom buttons that match the design of any website.",
+      skills: ["Node Js", "NPM", "Javascript", "React Js", "Tailwind Css"],
+      image: "/images/proje1.png",
+      link: "https://react-buttons-seven.vercel.app/",
+    },
+    {
+      title: "Ai Powered Code Cleaner and Optimizer, Ainu",
+      description:
+        "Ainu is an AI-powered code cleaner and optimizer that helps developers write cleaner, more efficient code. It uses machine learning algorithms to analyze code and suggest improvements, such as removing redundant lines, optimizing loops, and fixing syntax errors. The tool is designed to save developers time and effort in debugging and optimizing their code, resulting in faster, more reliable applications.",
+      skills: [
+        "Next JS",
+        "Ai Integration",
+        "Javascript",
+        "React Js",
+        "Tailwind Css",
+      ],
+      image: "/images/proj3.png",
+      link: "https://codeainu.vercel.app/",
+    },
+    {
+      title: "Ai Powered Email Copywriter, WriteRuin",
+      description:
+        "WriteRuin is an AI-powered email copywriter that helps marketers create compelling, high-converting email campaigns. The tool uses natural language processing and machine learning to generate personalized email copy based on user input, such as product descriptions, target audience, and desired tone. It is designed to save marketers time and effort in crafting engaging email content that drives conversions and builds customer loyalty.",
+      skills: [
+        "Next JS",
+        "Ai Integration",
+        "Javascript",
+        "React Js",
+        "Tailwind Css",
+        "Framer Motion",
+      ],
+      image: "/images/proj2.png",
+      link: "https://writeruin.vercel.app/",
+    },
+    {
+      title: "Ai Chatbot Assistant, Ainu",
+      description:
+        "It is an Ai Chatbot Assistant, that helps with several questions, problems, and queries. It uses Qwen Api to generate responses to the user's queries. It works like any other Ai - Powered Chatbot, but it is more efficient and fast.",
+      skills: [
+        "Next JS",
+        "Ai Integration",
+        "Qwen Api",
+        "Javascript",
+        "React Js",
+        "Tailwind Css",
+        "Framer Motion",
+      ],
+      image: "/images/proj4.png",
+      link: "https://chatainu.vercel.app/",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-900 font-[Poppins]">
@@ -128,13 +181,19 @@ function App() {
             </div>
             <div className="icons flex gap-3 mt-5 md:mt-20 items-center">
               <div className="text-[#7D90B7] hover:text-white transition-colors duration-300 cursor-pointer">
-                <FaGithub size={25} style={{ color: "inherit" }} />
+                <a href="https://github.com/mrkhayam" target="_blank">
+                  <FaGithub size={25} style={{ color: "inherit" }} />
+                </a>
               </div>
               <div className="text-[#7D90B7] hover:text-white transition-colors duration-300 cursor-pointer">
-                <FaLinkedin size={25} style={{ color: "inherit" }} />
+                <a href="https://linkedin.com/in/khayam-ijaz" target="_blank">
+                  <FaLinkedin size={25} style={{ color: "inherit" }} />
+                </a>
               </div>
               <div className="text-[#7D90B7] hover:text-white transition-colors duration-300 cursor-pointer">
-                <FaInstagram size={25} style={{ color: "inherit" }} />
+                <a href="https://www.instagram.com/kh4yam/" target="_blank">
+                  <FaInstagram size={25} style={{ color: "inherit" }} />
+                </a>
               </div>
             </div>
             <p className="text-[#7D90B7] text-sm mt-4">+923175080524</p>
@@ -304,135 +363,14 @@ function App() {
             <h1 className="text-white font-semibold md:hidden block my-5">
               Projects
             </h1>
-            <div className="Proj flex md:mt-4 mt-8 mb-3 flex-col w-full min-h-50 gap-3 transition-all duration-300 items-center cursor-pointer hover:bg-[#b6b6b60c] border-t md:p-5 border-transparent hover:border-[#7c7c7c3a] rounded-md backdrop-blur-medium">
-              <div className="projTop w-full md:h-72 h-44">
-                <img
-                  className="w-full h-full rounded-md"
-                  src="https://xultechng.com/home/image/solutions/ui-ux.webp"
-                  alt=""
-                />
-              </div>
-              <div className="expRight md:w-full h-full">
-                <h1 className="text-white md:text-3xl text-xl font-medium">
-                  Senior Front End Engineer, Accessibility - Creatobype
-                </h1>
-                <p className="md:mt-4 mt-2">
-                  I contribute to the creation and maintenance of UI components
-                  that power Klaviyo’s frontend, ensuring our platform meets web
-                  accessibility standards and best practices to deliver an
-                  inclusive user experience.
-                </p>
-                <div className="mt-4 flex flex-wrap w-full gap-2">
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    HTML
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Css
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Javascript
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    React Js
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Tailwind Css
-                  </h1>
-                </div>
-                <div className="w-full flex items-center justify-end">
-                  <button className="mt-7 self-end flex gap-1 rounded-full py-2 hover:bg-[#54d4d423] transition-all duration-300 px-6 hover:text-[#53e4e4] items-center cursor-pointer">
-                    View Now <GoArrowUpRight size={25} />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="Proj flex md:mt-4 mt-8 mb-3 flex-col w-full min-h-50 gap-3 transition-all duration-300 items-center cursor-pointer hover:bg-[#b6b6b60c] border-t md:p-5 border-transparent hover:border-[#7c7c7c3a] rounded-md backdrop-blur-medium">
-              <div className="projTop w-full md:h-72 h-44">
-                <img
-                  className="w-full h-full rounded-md"
-                  src="https://xultechng.com/home/image/solutions/ui-ux.webp"
-                  alt=""
-                />
-              </div>
-              <div className="expRight md:w-full h-full">
-                <h1 className="text-white md:text-3xl text-xl font-medium">
-                  Senior Front End Engineer, Accessibility - Creatobype
-                </h1>
-                <p className="md:mt-4 mt-2">
-                  I contribute to the creation and maintenance of UI components
-                  that power Klaviyo’s frontend, ensuring our platform meets web
-                  accessibility standards and best practices to deliver an
-                  inclusive user experience.
-                </p>
-                <div className="mt-4 flex flex-wrap w-full gap-2">
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    HTML
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Css
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Javascript
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    React Js
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Tailwind Css
-                  </h1>
-                </div>
-                <div className="w-full flex items-center justify-end">
-                  <button className="mt-7 self-end flex gap-1 rounded-full py-2 hover:bg-[#54d4d423] transition-all duration-300 px-6 hover:text-[#53e4e4] items-center cursor-pointer">
-                    View Now <GoArrowUpRight size={25} />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="Proj flex md:mt-4 mt-8 mb-3 flex-col w-full min-h-50 gap-3 transition-all duration-300 items-center cursor-pointer hover:bg-[#b6b6b60c] border-t md:p-5 border-transparent hover:border-[#7c7c7c3a] rounded-md backdrop-blur-medium">
-              <div className="projTop w-full md:h-72 h-44">
-                <img
-                  className="w-full h-full rounded-md"
-                  src="https://xultechng.com/home/image/solutions/ui-ux.webp"
-                  alt=""
-                />
-              </div>
-              <div className="expRight md:w-full h-full">
-                <h1 className="text-white md:text-3xl text-xl font-medium">
-                  Senior Front End Engineer, Accessibility - Creatobype
-                </h1>
-                <p className="md:mt-4 mt-2">
-                  I contribute to the creation and maintenance of UI components
-                  that power Klaviyo’s frontend, ensuring our platform meets web
-                  accessibility standards and best practices to deliver an
-                  inclusive user experience.
-                </p>
-                <div className="mt-4 flex flex-wrap w-full gap-2">
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    HTML
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Css
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Javascript
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    React Js
-                  </h1>
-                  <h1 className="rounded-full bg-[#54d4d423] px-4 text-[#53e4e4] py-1">
-                    Tailwind Css
-                  </h1>
-                </div>
-                <div className="w-full flex items-center justify-end">
-                  <button className="mt-7 self-end flex gap-1 rounded-full py-2 hover:bg-[#54d4d423] transition-all duration-300 px-6 hover:text-[#53e4e4] items-center cursor-pointer">
-                    View Now <GoArrowUpRight size={25} />
-                  </button>
-                </div>
-              </div>
-            </div>
+            {projects.map((project, index) => (
+              <Project key={index} project={project} />
+            ))}
           </div>
 
-          <p className="text-sm text-center my-10">Khayam Ijaz | 2025</p>
+          <p className="text-sm text-center my-10">
+            Khayam Ijaz | Frontend Developer
+          </p>
         </div>
       </div>
     </div>
